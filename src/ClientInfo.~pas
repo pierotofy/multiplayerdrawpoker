@@ -1,0 +1,48 @@
+unit ClientInfo;
+
+interface
+
+uses Classes, SysUtils, IdTcpServer,
+  Constants;
+
+type
+  TClientInfo = class
+  private
+    Nickname: string;
+  public
+    Money: integer;
+    AThread: TIdPeerThread;
+    
+    constructor Create(AThread: TIdPeerThread);
+    function GetNickname: string;
+  end;
+
+implementation
+
+{ Implementazione classe TClientInfo }
+constructor TClientInfo.Create(AThread: TIdPeerThread; Money: integer);
+var
+  StrData: string;
+  Command: string;
+begin
+  self.AThread := AThread;
+  self.Money := Money;
+
+  { Riceviamo il nickname dal client }
+  StrData := AThread.Connection.ReadLn;
+  Command := GetCommand(StrData);
+
+  if Command = '/MYNICKNAMEIS' then
+    Nickname := GetToken(StrData,1);
+end;
+
+{ Funzione che restituisce il nickname }
+function TClientInfo.GetNickname: string;
+begin
+  Result := Nickname;
+end;
+
+
+
+
+end.

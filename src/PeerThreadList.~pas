@@ -1,0 +1,48 @@
+unit PeerThreadList;
+
+interface
+
+uses Classes, SysUtils, IdTcpServer,
+  Constants;
+
+type
+  TPeerThreadList = class(TList)
+  private
+    MaxPlayers: integer;
+  public
+    constructor Create(MaxPlayers: integer);
+
+    procedure AddPeerThread(AThread: TIdPeerThread); override;
+    function GetPeerThread(Index: integer): TIdPeerThread;
+  end;
+
+implementation
+
+{ Implementazione classe TPlayerList }
+
+constructor TPeerThreadList.Create(MaxPlayers: integer);
+begin
+  { Richiama il costruttore base }
+  inherited Create;
+
+  self.MaxPlayers := MaxPlayers;
+end;
+
+{ Procedura per aggiungere un thread alla lista }
+procedure TPeerThreadList.AddPeerThread(AThread: TIdPeerThread);
+begin
+  if self.Count < MaxPlayers then
+    self.Add(AThread)
+  else raise Exception.Create('Si è tentato di aggiungere alla lista dei giocatori più di quanto stabilito');
+end;
+
+{ Funzione che ritorna un oggetto TIdPeerThread }
+function TPeerThreadList.GetPeerThread(Index: integer): TIdPeerThread;
+begin
+  Result := TIdPeerThread(self.Get(Index));
+end;
+
+
+
+end.
+ 

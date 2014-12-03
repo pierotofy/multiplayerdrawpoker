@@ -1,0 +1,46 @@
+unit BetPanel;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TFrmBet = class
+    txtBet: TEdit;
+    btnOk: TButton;
+    lblDescription: TLabel;
+    lblMoneyChar: TLabel;
+  private
+    MaxBet, MinBet: integer;
+  public
+    { Costruttore personalizzato }
+    constructor Create(AOwner: TComponent; Description: string; MaxBet, MinBet: integer);
+    { Public declarations }
+  end;
+
+var
+  FrmBet: TFrmBet;
+
+implementation
+
+{$R *.dfm}
+
+{ Implementazione classe TFrmBet }
+constructor TFrmBet.Create(AOwner: TComponent; Description: string; MaxBet, MinBet: integer);
+begin
+  inherited Create(AOwner);
+
+  { La descrizione non puo' essere più lunga di 34 caratteri }
+  if Length(Description) > 34 then raise Exception.Create('La descrizione passata al costruttore di TFrmBet non può essere più lunga di 34 caratteri.')
+  else begin
+    lblDescription.Caption := Description;
+    self.MinBet := MinBet;
+    self.MaxBet := MaxBet;
+    txtBet.Text := IntToStr(MinBet);
+    txtBet.SelectAll;
+  end;
+end;
+
+end.

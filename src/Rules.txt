@@ -1,0 +1,114 @@
+Il poker è un gioco d’azzardo che viene giocato in tutto il mondo e che si presta a molti tipi diversi nel modo di giocarlo. Ecco la guida al poker
+Iniziamo questa guida al poker vedendo con quante carte si gioca il poker.
+Quello americano si gioca sempre con 52 carte e possono prendere parte quanti giocatori vogliono.
+In Italia, però, è praticato molto poco, per cui ci occupiamo solo del poker che prevede il numero di carte in rapporto al numero dei giocatori. Quindi già questa è una cosa molto importante che differenzia il poker italiano da quello americano.
+Solitamente, attorno ad un tavolo da poker, si possono sedere da tre a sei giocatori. Comunque il numero ideale è di quattro o cinque persone; l’ottimo si raggiunge, senza alcuna dubbio, in quattro giocatori.
+Per quanto riguarda il numero delle carte, esiste una regola molto semplice: dal numero “11” si sottrae il numero dei giocatori.
+Le carte presenti nel mazzo per ogni seme, sono in ordine decrescente, le seguenti:
+A K Q J 10 9 8 7 6 5 4 3 2
+Quindi, se sono quattro giocatori, si conterà 11 - 4 = 7
+Si escluderanno, in questo caso, tutte le carte inferiori alla carta con valore 7.
+Si giocherà con un mazzo di 32 carte.
+Nel poker, ogni giocatore riceve, nel corso della mano, cinque carte e dopo le varie puntate effettuate durante il gioco, alla fine vince chi ha realizzato la combinazione di maggior valore. Quindi ora vediamo le combinazioni che si possono ottenere con le cinque carte ed il loro corrispettivo valore.
+Il valore delle singole carte va dall’asso, che è il maggiore, a scendere seguito dal re e così via. Bisogna anche tenere presente il valore dei semi che è il seguente:
+CUORI
+QUADRI
+FIORI
+PICCHE
+E quindi a uguale valore di punteggio il seme di Cuori batte tutte gli altri e così via a scendere.
+Le combinazioni che si possono ottenere in ordine crescente sono molto semplici:
+Coppia
+Doppia Coppia
+Tris
+Scala
+Full
+Colore
+Poker
+Scala Reale
+La COPPIA è formata da due carte dello stesso valore fra le cinque in mano, le restanti tre sono di valore diverso fra loro.
+La Coppia prende il nome dalle carte che la formano. Due Assi si chiameranno “Coppia d’Assi ”, due donne “Coppia di donne” e così per gli altri semi.
+La DOPPIA COPPIA, invece, è l’unione di due Coppie diverse fra loro e la restante carta è di valore diverso. La Doppia Coppia prende il nome dalla Coppia di valore più alta. Ad esempio due Re e due Otto formeranno una Doppia Coppia al Re.
+La Doppia Coppia di valore più alto, formata da due Assi e due Re, prende il nome di “TITANIC”.
+Il TRIS è la combinazione formata da tre carte dello stesso valore mentre le altre due sono di valore diverso tra loro.
+Logicamente il TRIS prende il nome dalle carte che lo formano, quindi tre Re formeranno un TRIS di Re
+La SCALA è una combinazione formata da cinque carte sistemate in ordine crescente di valore ma, molto importante, non dello stesso seme. Per esempio cinque carte disposte in questo modo: 9-10-J-Q-K formano una scala al KAPPA. In poche parole la successione delle carte deve essere continua.
+Nel poker unica eccezione nella scala è costituita dall’ASSO, che può essere posto all’inizio della stessa, prima della carta più bassa presente nel mazzo, a seconda dei giocatori presenti.
+Per quanto riguarda il nome da dare alla scala, si tenga presente che l’Asso posto prima della carta più bassa, la battezza come “Scala minima”.
+“Scala media” è quella che non ha Asso né come prima né come ultima carta e prende il nome dalla carta di valore più elevato presente nella combinazione.
+“Scala massima” è quella che ha l’Asso in ultima posizione. Praticamente la “Scala massima” è la seguente: 10-J-Q-K-A.
+Il FULL è la combinazione di carte in cui tre formano un TRIS e due formano una COPPIA. Il nome è dato dal valore del TRIS presente. Questa combinazione è la più usata da chi vuole barare a poker, di solito nasconde delle carte
+e le introduce al momento giusto, la volta dopo darà lui le carte e toglierà abilmente quelle in più.. come in
+un gioco di prestigio.. del resto chi gioca a poker deve essere scaltro e anche.. prestigiatore.. ma barare è un reato !
+Il COLORE è molto semplice: cinque carte tutte dello stesso seme pur non essendo in valore di scala. Il nome, logicamente, lo prende dal seme. Sarà, ad esempio, un colore a picche, se le cinque carte saranno tutte del seme picche.
+Il POKER è una combinazione di quattro carte dello stesso valore e prende il nome dalle carte che lo formano. Quattro Assi formeranno un “POKER d’ASSI”.
+LA SCALA REALE è la più alta e importante di tutte le combinazioni. E’ formata da cinque carte a colori disposte in scala. Il nome è uguale a quello delle scale semplici con l’aggiunta del nome del seme che la compone.
+La vincita di una mano sarà data dalle seguenti condizioni:
+1 - La doppia coppia batte la coppia
+2 - il tris batte coppia e doppia coppia
+3 - la scala batte il tris
+4 - il full batte la scala
+5 - il colore batte il full
+6 - il poker batte il colore
+7 - la scala reale batte tutte le combinazioni
+Fra due coppie di valore diverso, logicamente vince quella di valore più alto.
+Fra due coppie dello stesso valore vince quella che fra le tre carte rimanenti ha almeno una carta di valore superiore. Se tale carta è uguale fra le coppie, vince quella con il seme maggiore, tenendo presente il valore dei semi.
+La stessa cosa dicasi per le doppie coppie.
+Fra due doppie coppie, se le maggiori sono uguali, vince la coppia minore di valore più elevato. Se le doppie coppie sono perfettamente uguali, vince quella che come quinta carta ha un valore superiore.
+Fra due tris vince tranquillamente quello di valore più alto.
+Fra due scale vince quella con la carta maggiore più alta.
+Fra due scale uguali vince quella formata dal seme più alto.
+Fra due full vince quello con il tris più alto e si trascurano le due carte che formano la coppia.
+Fra due colori vince quello con il seme maggiore e se sono dello stesso seme vince quello che ha l’Asso.
+Fra due poker vince il valore superiore.
+Anche nella scala reale vince quella di valore superiore e se dovessero essere entrambe uguali, in tal caso vince quella con il seme superiore.
+All’inizio di una eventuale partita si può anche decidere che la scala reale minima batte la massima. In genere però sono condizioni che è meglio stabilire bene prima di iniziare.
+
+COME SI SVOLGE LA PARTITA a POKER (Guida al poker)
+
+All’inizio della partita i giocatori devono sorteggiare il posto e decidere chi è il mazziere per la prima mano. Quindi stabilire quanto tempo dovrà durare la partita, quante fiches distribuire ad ognuno e il valore da attribuire al “cip”, cioè alla puntata minima nel piatto.
+Per iniziarela partita a poker , il mazziere dovrà mettere nel piatto una somma a piacere come invito al gioco che sarà obbligatoria per tutti, inoltre dovrà aggiungere un cip.
+Mescola le carte, le fa alzare e le distribuisce una alla volta iniziando dal giocatore che siede alla sua sinistra sino ad averne cinque nelle mani. Le restanti carte saranno lasciate, sempre coperte, accanto al mazziere.
+Ora il gioco inizia con l’apertura, che può essere fatta minimo con una coppia di fanti o con un tentativo di scala reale bilaterale (cioè o la prima o l’ultima).
+Il primo giocatore, alla sinistra del mazziere, controlla le sue carte e se decide di aprire dice “apro” e fa la sua puntata a piacere. Se decide di non aprire o non può aprire, dirà “passo” e la parola passa alla sua sinistra e via così sino al mazziere. Se nessuno apre, cioè passano tutti, bisognerà rifare le carte e il mazziere sarà il primo a sinistra del precedente.
+Prima di ridistribuire le nuove carte, il mazziere del poker dovrà fare una nuova puntata di invito.
+Se un giocatore apre dovrà fissare una puntata che non potrà mai essere superiore al valore del piatto stesso.
+Gli altri, quando sarà il loro turno, avranno tre possibilità di gioco:
+1 - Potranno dire “passo” ed in tal caso non metteranno alcuna puntata e si escluderanno dal gioco.
+2 - Potranno dire “gioco” ed in tal caso dovranno coprire il piatto con una somma uguale a quella posta da chi ha aperto.
+Terza possibilità, molto importante, è quella del “rilancio” con una puntata superiore a quella già effettuata dall’avversario. La mano procede finchè tutti i giocatori sono passati o hanno visto l’ultimo rilancio mettendo la relativa somma nel piatto.
+Va sottolineato che, pur avendo accettato l’apertura e i relativi rilanci, un giocatore può decidere di passare di fronte ad un ennesimo rilancio e quindi escludersi dal gioco ed ovviamente perdere le puntate che ha già effettuato.
+Una volta conclusa questa fase del gioco, si passa allo “scarto”.
+Ogni giocatore, rimasto in gioco, ha la facoltà di cambiare da una a quattro carte di quelle che ha in mano. Può anche dichiararsi “servito” ed in tal caso conserverà le cinque carte ricevute all’inizio.
+Se le carte da ridistribuire dovessero finire, il mazziere rimescolerà le carte di scarto ad eccezione di quelle del giocatore che aspetta le nuove carte.
+Inizia quindi la seconda parte delle puntate. Il primo a parlare deve essere colui che ha aperto, e nel caso fosse passato, il giocatore subito alla sua sinistra.
+Anche in questo caso, il giocatore ha le seguenti possibilità:
+1 - dire “cip” e puntare la minima puntata stabilita all’inizio del gioco.
+2 - rilanciare con una nuova puntata superiore all’ultima effettuata.
+3 - dire “parole”, cioè passare la parola al giocatore alla sua sinistra e in tal caso
+si mantiene sempre in gioco.
+4 - dire “passo”, cioè non accettare il nuovo rilancio e quindi escludersi dal
+gioco.
+5 - dire “vedo”, cioè accettare il nuovo rilancio coprendo il piatto della somma
+relativa.
+rilanciare, cioè aumentare la somma del rilancio fatto dall’avversario in
+precedenza.
+Il gioco ha fine quando tutti i giocatori rimasti hanno detto “passo” o “vedo”.
+Ora inizia la parte finale; il giocatore che ha rilanciato per ultimo scopre le sue carte e mostra il suo punteggio che ha in mano.
+Se fra coloro che hanno “visto” c’è qualcuno che ha un punteggio maggiore lo dichiara facendo vedere le sue carte. Coloro che hanno perso non sono tenuti a mostrare il loro punteggio.
+Così come colui che ha rilanciato per ultimo non mostra le sue carte se tutti gli altri hanno deciso di non vedere e quindi passare.
+Se dovesse succedere che tutti i giocatori, durante le varie fasi del gioco, hanno detto “parole”, in tal caso la mano ha termine e bisogna giocarne un’altra.
+Le puntate effettuate restano nel piatto, e i giocatori che hanno versato meno degli altri devono pareggiare le puntate.
+Il nuovo (piatto di parole) dovrà essere aperto con minimo una coppia di re e un valore pari a quanto contenuto nel piatto.
+Nel poker esiste anche una apertura chiamata “al buio” che può essere effettuata solo dal giocatore alla sinistra del mazziere e deve essere dichiarata prima della distribuzione delle carte. Per tale apertura al buio, colui che la effettua, dovrà versare nel piatto il doppio del contenuto. Ha il vantaggio di essere il solo a poter effettuare un rilancio che deve essere una somma uguale al buio o ad un suo multiplo sino ad un massimo di tre. Dopo che sono state ridistribuite le carte ha il diritto di parlare per ultimo e il primo a parlare sarà chi siede alla sinistra di chi ha chiamato il buio. Gli altri giocatori possono solo dire “vedo il buio” o “non vedo il buio” e ritirarsi dal gioco. Se colui che ha chiamato il buio rilancia, gli altri giocatori, che non sono passati, hanno il diritto di vedere o passare o aumentare a loro volta il piatto con un nuovo rilancio.
+Chi siede alla sinistra di colui che ha chiamato il buio, può a sua volta chiamare un “controbuio”, ma dovrà mettere nel piatto il doppio della somma messa in precedenza dal buio. Tutto questo sempre prima che siano distribuite le carte.
+Molto importante nel gioco del poker è il “bluff”. Attenti ai trucchi di chi vuole barare a poker.
+Bluffare è l’abilità del giocatore nel far credere agli altri di avere nelle mani un punteggio molto forte e quindi costringerli a non vedere la nostra mano e vincere il piatto pur non avendo nulla. E’ un’arma a doppio taglio che può anche danneggiare gravemente chi applica tale soluzione.
+Attenzione quando un giocatore usa la tecnica di bluffare introduce anche una tensione emotiva
+che potrebbe portare a un allentamento dell'attenzione e a quel punto chi ha intenzione di barare potrebbe
+tirare fuori il classico asso nella manica.
+Il poker nell'immaginario collettivo è legato ai film western, ai casinò americani, insomma è un gioco che ci porta
+a posti lontani. In Italia in effetti è giocato ma non quanto i giochi tradizionali che si fanno con le carte napoletane come la scopa.
+
+
+Fonte: http://www.estrazioni-del-lotto-e-superenalotto.com/poker.htm
+

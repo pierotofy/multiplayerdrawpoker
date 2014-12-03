@@ -1,0 +1,224 @@
+unit Languages;
+
+interface
+
+uses StrUtils,Windows,Classes, INIFiles, SysUtils, Registry;
+
+{ Classe TLangFile }
+type
+  TLangFile = class(TIniFile)
+  private
+    LangString: string;
+  public
+    constructor Create(FilePath: string);
+    function IsValid: boolean;
+    function ToString: string;
+  end;
+
+{ Variabile globale che contiene il riferimento allo
+stream della lingua corrente }
+const DEFAULTLANGUAGE = 'Italiano';
+
+var
+  CurrentLangFile: TLangFile;
+  SupportedLanguages: TList;
+
+function GetStr(DataIndex: integer): string; overload;
+function GetStr(DataIndex: integer; Arguments: string): string; overload;
+function GetSupportedLanguages(PokerDir: string): TList;
+procedure SetCurrentLanguage(LangFile: TLangFile);
+function GetLanguageFile(Language: string): TLangFile; overload;
+function GetLanguageFile(Index: integer): TLangFile; overload;
+function Split(StrBuf,Delimiter: string): TStringList;
+function GetFavouriteLanguage: string;
+procedure SetFavouriteLanguage(Lang: string);
+
+//function GetWord(WordIndex: integer);
+
+implementation
+
+{ Implementazione classe TLangFile }
+constructor TLangFile.Create(FilePath: string);
+begin
+  inherited Create(FilePath);
+  LangString := self.ReadString('Notes','Language','');
+end;
+
+{ Fuzione per vedere se si tratta di un file valido... }
+function TLangFile.IsValid: boolean;
+begin
+  Result := LangString <> '';
+end;
+
+{ Funzione che ritorna il nome della lingua }
+function TLangFile.ToString: string;
+begin
+  Result := LangString;
+end;
+
+{ Funzione per vedere se abbiamo già selezionato una preferenza per la lingua.. }
+function GetFavouriteLanguage: string;
+var
+  Reg: TRegistry;
+begin
+  Reg := TRegistry.Create;
+  Reg.OpenKey('\Software\MultiplayerPoker',true);
+  Result := Reg.ReadString('Language');
+  Reg.CloseKey;
+end;
+
+{ Procedura per impostare la lingua preferita.. }
+procedure SetFavouriteLanguage(Lang: string);
+var
+  Reg: TRegistry;
+begin
+  Reg := TRegistry.Create;
+  Reg.CreateKey('\Software\MultiplayerPoker\');
+  Reg.OpenKey('\Software\MultiplayerPoker',true);
+  Reg.WriteString('Language', Lang);
+  Reg.CloseKey;
+end;
+
+
+
+{ Funzione per scannarizzare la directory locale
+e trovare tutte le lingue supportate dal programma }
+function GetSupportedLanguages(PokerDir: string): TList;
+var
+  searchRes: TSearchRec;
+  LangList: TList;
+  LangFile: TLangFile;
+begin
+  { Inizializza la lista.. }
+  LangList := TList.Create;
+
+  { Trova tutte le corrispondenze del pattern *.ini}
+  if FindFirst('*.dat', faAnyFile, searchRes) = 0 then
+  begin
+    repeat
+      LangFile := TLangFile.Create(PokerDir + '/' + searchRes.Name);
+      if LangFile.IsValid then LangList.Add(LangFile);
+    until FindNext(searchRes) <> 0;
+                               
+    { Liberiamo le risorse.. }
+    FindClose(searchRes);
+  end;                   
+                               
+  Result := LangList;                                                                              
+end;
+
+{ Funzione che ritorna una frase nella lingua corrente... }
+function GetStr(DataIndex: integer): string;
+begin               
+  Result := CurrentLangFile.ReadString('Data',IntToStr(DataIndex),'?????');
+end;
+
+{ Versione overloadata che accetta anche una serie di parametri }
+function GetStr(DataIndex: integer; Arguments: string): string;
+var
+  DataSplit, ArgsSplit: TStringList;
+  ResStr: string;
+  C: integer;
+begin
+  { Se non ci sono argomenti, richiama la procedura standard
+  ed esci }
+  if Arguments = '' then begin
+    Result := GetStr(DataIndex);
+    exit;
+  end;
+
+  try
+    DataSplit := Split(GetStr(DataIndex),'%');
+    ArgsSplit := Split(Arguments,',');
+    ResStr := '';
+
+    { -2 perchè non teniamo conto dell'ultimo.. }
+    for C := 0 to DataSplit.Count-2 do
+      ResStr := ResStr + DataSplit.ValueFromIndex[C] + ArgsSplit.ValueFromIndex[C];
+
+    { Incolla l'ultimo pezzo.. }
+    ResStr := ResStr + DataSplit.ValueFromIndex[DataSplit.Count-1];
+
+    { Et voila'! }
+    Result := ResStr;
+  except
+    { Qualsiasi cosa accada, non crasharmi ma ritorna una stringa con i punti di domanda }
+    Result := '?????';
+  end;
+end;
+
+{ Procedura per impostare una lingua corrente }
+procedure SetCurrentLanguage(LangFile: TLangFile);
+begin
+  CurrentLangFile := LangFile;
+end;
+
+{ Funzione che ritorna un riferimento al file di lingua
+a partire dal nome della lingua }
+function GetLanguageFile(Language: string): TLangFile;
+var
+  C: integer;
+  LangFile: TLangFile;
+begin
+  { Cancella le e commerciali... }
+  Language := AnsiReplaceStr(Language,'&','');
+
+  for C := 0 to SupportedLanguages.Count-1 do
+  begin
+    LangFile := GetLanguageFile(C);
+    if AnsiUpperCase(LangFile.ToString) = AnsiUpperCase(Language) then begin
+      Result := LangFile;
+      exit;            
+    end;      
+  end;           
+
+  { Questo non dovrebbe mai venir eseguito
+  se viene eseguito vuol dire che un file di lingua non è stato trovato
+  se il numero di lingue supportato è zero vuol dire che non ci sono lingue e bisogna chiudere
+  il programma, altrimenti vuol dire che bisogna usare la lingua di default.. }
+  if SupportedLanguages.Count < 1 then begin
+    MessageBox(0,'No languages avaible. Make sure that the file English.dat is in the same directory of MultiplayerPoker.exe. Note that if you are executing MultiplayerPoker from a Winzip archive, you have to extract all the files before executing the application.','No languages found', MB_OK or MB_ICONWARNING);
+    ExitProcess(1);
+  end
+
+  else Result := GetLanguageFile(0);
+end;
+                                       
+{ Versione overloadata a partire dal suo indice }
+function GetLanguageFile(Index: integer): TLangFile;
+begin
+  Result := TLangFile(SupportedLanguages.Items[Index]);
+end;
+
+
+
+{ Funzione split che la borland si è dimenticata.... -.- }
+function Split(StrBuf,Delimiter: string): TStringList;
+{ Porting della funzione Split di Visual Basic in Delphi by Piero Tofy (C) 2005 }
+var
+  MyStrList: TStringList;
+  TmpBuf: string;
+  LoopCount: integer;
+begin
+  MyStrList := TStringList.Create;
+  LoopCount := 0;
+
+  repeat
+    if StrBuf[LoopCount] = Delimiter then begin
+      MyStrList.Add(TmpBuf);
+      TmpBuf := '';
+    end;
+
+    TmpBuf := TmpBuf + StrBuf[LoopCount];
+    inc(LoopCount);
+  until LoopCount > Length(StrBuf);
+
+  { Inserisce gli ultimi dati del buffer... }
+  MyStrList.Add(TmpBuf);
+
+  Result := MyStrList;
+end;
+
+
+
+end.

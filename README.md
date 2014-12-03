@@ -1,4 +1,15 @@
-multiplayerdrawpoker
+Multiplayer Draw Poker
 ====================
+A free GNU GPL licensed game for the Win32 platform.
 
-Game of 5 Card Draw Poker for Windows
+![Alt text](/screenshot.jpg?raw=true "") 
+
+Features
+========
+- Multiplayer games across the LAN or Internet.
+- CPU controlled players.
+- Lobby multiplayer to find people to play with.
+- Chat system.
+- Automatic updates.
+
+© Piero Toffanin 2005

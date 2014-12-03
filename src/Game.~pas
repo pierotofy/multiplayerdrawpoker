@@ -1,0 +1,78 @@
+unit Game;
+
+interface
+
+uses Constants;
+
+type
+  TGameServer = class
+  private
+    m_Cip: integer;
+    m_InitialMoney: integer;
+    m_Port: integer;
+    m_Password: string;
+    m_Name: string;
+
+    function GetCip: integer;
+    function GetInitialMoney: integer;
+    function GetPort: integer;
+    function GetPassword: string;
+    function GetName: string;
+  public
+    constructor Create(Name, Password: string; Port, Cip, InitialMoney: integer); overload;
+    constructor Create(Host, Password, Nickname: string; Port: integer); overload;
+
+    property Cip: integer read GetCip;
+    property InitialMoney: integer read GetInitialMoney;
+    property Port: integer read GetPort;
+    property Password: string read GetPassword;
+    property Name: string read GetName;
+  end;
+
+implementation
+
+{ Implementazione classe TGame }
+
+{ Costruttore per il server }
+constructor TGame.Create(Name, Password: string; Port, Cip, InitialMoney: integer);
+begin
+  m_Name := Name;
+  m_Password := Password;
+  m_Port := Port;
+  m_Cip := Cip;
+  m_InitialMoney := InitialMoney;
+
+  //TODO: Inizializza socket
+end;
+
+{ Costruttore per il client }
+constructor TGame.Create(Host, Password, Nickname: string; Port: integer);
+begin
+
+end;
+
+{ Inizio funzioni per proprietà readonly }
+function TGame.GetCip: integer;
+begin
+  Result := m_Cip;
+end;
+function TGame.GetInitialMoney: integer;
+begin
+  Result := m_InitialMoney;
+end;
+function TGame.GetPort: integer;
+begin
+  Result := m_Port;
+end;
+function TGame.GetPassword: string;
+begin
+  Result := m_Password;
+end;
+function TGame.GetName: string;
+begin
+  Result := m_Name;
+end;
+{ Fine funzioni per proprietà readonly }
+
+
+end.
